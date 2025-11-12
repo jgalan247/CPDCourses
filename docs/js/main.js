@@ -1,31 +1,29 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
+// AI Tools for Teachers - Main JavaScript
 
-// Progress tracking (saves to localStorage)
-const PROGRESS_KEY = 'cpd_progress';
-
+// Progress Management
 function getProgress() {
-    const saved = localStorage.getItem(PROGRESS_KEY);
-    return saved ? JSON.parse(saved) : {
-        module1: { started: false, completed: false, activities: [] },
-        module2: { started: false, completed: false, activities: [] },
-        module3: { started: false, completed: false, activities: [] }
+    const defaultProgress = {
+        module1: { started: false, activities: [], completed: false },
+        module2: { started: false, activities: [], completed: false },
+        module3: { started: false, activities: [], completed: false }
     };
+
+    try {
+        const saved = localStorage.getItem('cpd_progress');
+        return saved ? JSON.parse(saved) : defaultProgress;
+    } catch (e) {
+        console.error('Error loading progress:', e);
+        return defaultProgress;
+    }
 }
 
 function saveProgress(progress) {
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+    try {
+        localStorage.setItem('cpd_progress', JSON.stringify(progress));
+        updateProgressDisplay();
+    } catch (e) {
+        console.error('Error saving progress:', e);
+    }
 }
 
 function markActivityComplete(module, activityId) {
@@ -35,193 +33,246 @@ function markActivityComplete(module, activityId) {
     }
     progress[module].started = true;
     saveProgress(progress);
-    updateProgressUI();
 }
 
 function markModuleComplete(module) {
     const progress = getProgress();
     progress[module].completed = true;
+    progress[module].started = true;
     saveProgress(progress);
-    updateProgressUI();
 }
 
-function updateProgressUI() {
-    // This will be expanded in module pages
+function isActivityComplete(module, activityId) {
     const progress = getProgress();
-    console.log('Progress updated:', progress);
+    return progress[module].activities.includes(activityId);
 }
 
-// Interactive quiz/activity handler
-function createInteractiveQuiz(quizData) {
-    const quizContainer = document.getElementById('quiz-container');
-    if (!quizContainer) return;
-
-    let currentQuestion = 0;
-    let score = 0;
-
-    function renderQuestion() {
-        const question = quizData[currentQuestion];
-        quizContainer.innerHTML = `
-            <div class="quiz-question">
-                <h3>Question ${currentQuestion + 1} of ${quizData.length}</h3>
-                <p>${question.question}</p>
-                <div class="quiz-options">
-                    ${question.options.map((option, index) => `
-                        <button class="quiz-option" data-index="${index}">
-                            ${option}
-                        </button>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-
-        document.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const selectedIndex = parseInt(e.target.dataset.index);
-                checkAnswer(selectedIndex, question.correct);
-            });
-        });
-    }
-
-    function checkAnswer(selected, correct) {
-        if (selected === correct) {
-            score++;
-            showFeedback(true);
-        } else {
-            showFeedback(false);
-        }
-
-        setTimeout(() => {
-            currentQuestion++;
-            if (currentQuestion < quizData.length) {
-                renderQuestion();
-            } else {
-                showResults();
-            }
-        }, 1500);
-    }
-
-    function showFeedback(isCorrect) {
-        const feedback = document.createElement('div');
-        feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
-        feedback.textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
-        quizContainer.appendChild(feedback);
-    }
-
-    function showResults() {
-        quizContainer.innerHTML = `
-            <div class="quiz-results">
-                <h3>Quiz Complete!</h3>
-                <p>You scored ${score} out of ${quizData.length}</p>
-                <button class="btn btn-primary" onclick="location.reload()">Retake Quiz</button>
-            </div>
-        `;
-    }
-
-    renderQuestion();
+function calculateModuleProgress(module, totalActivities = 5) {
+    const progress = getProgress();
+    const completedActivities = progress[module].activities.length;
+    return Math.round((completedActivities / totalActivities) * 100);
 }
 
-// Activity timer
-function startTimer(duration, displayElement) {
-    let timer = duration;
-    let minutes, seconds;
+function updateProgressDisplay() {
+    // Update individual module progress
+    ['module1', 'module2', 'module3'].forEach(module => {
+        const percentage = calculateModuleProgress(module);
+        const progressBar = document.getElementById(`${module}-progress-bar`);
+        const progressText = document.getElementById(`${module}-progress-text`);
 
-    const interval = setInterval(() => {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        displayElement.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            clearInterval(interval);
-            displayElement.textContent = "Time's up!";
-            playSound('complete');
-        }
-    }, 1000);
-
-    return interval;
-}
-
-// Sound effects (optional)
-function playSound(type) {
-    // Can be expanded with actual audio files
-    console.log(`Playing ${type} sound`);
-}
-
-// Expandable sections
-document.addEventListener('DOMContentLoaded', () => {
-    const expandables = document.querySelectorAll('.expandable-trigger');
-    expandables.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const content = trigger.nextElementSibling;
-            const isExpanded = content.style.display === 'block';
-            content.style.display = isExpanded ? 'none' : 'block';
-            trigger.classList.toggle('expanded');
-        });
-    });
-});
-
-// Form validation for activities
-function validateActivityForm(formId) {
-    const form = document.getElementById(formId);
-    if (!form) return false;
-
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
-
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            input.classList.add('error');
-            isValid = false;
-        } else {
-            input.classList.remove('error');
-        }
+        if (progressBar) progressBar.style.width = `${percentage}%`;
+        if (progressText) progressText.textContent = `${percentage}%`;
     });
 
-    return isValid;
+    // Update overall progress
+    const overall = Math.round((
+        calculateModuleProgress('module1') +
+        calculateModuleProgress('module2') +
+        calculateModuleProgress('module3')
+    ) / 3);
+
+    const overallBar = document.getElementById('overall-progress-bar');
+    const overallText = document.getElementById('overall-progress-text');
+
+    if (overallBar) overallBar.style.width = `${overall}%`;
+    if (overallText) overallText.textContent = `${overall}%`;
 }
 
-// Save activity responses to localStorage
+function resetProgress() {
+    if (confirm('Are you sure you want to reset all your progress? This cannot be undone.')) {
+        localStorage.removeItem('cpd_progress');
+        localStorage.removeItem('activity_responses');
+        updateProgressDisplay();
+        location.reload();
+    }
+}
+
+// Activity Response Management
 function saveActivityResponse(activityId, data) {
-    const responses = JSON.parse(localStorage.getItem('activity_responses') || '{}');
-    responses[activityId] = {
-        data: data,
-        timestamp: new Date().toISOString()
-    };
-    localStorage.setItem('activity_responses', JSON.stringify(responses));
-}
-
-// Retrieve saved responses
-function getActivityResponse(activityId) {
-    const responses = JSON.parse(localStorage.getItem('activity_responses') || '{}');
-    return responses[activityId] || null;
-}
-
-// Progress indicator for module pages
-window.addEventListener('scroll', () => {
-    const progressBar = document.querySelector('.progress-bar');
-    if (progressBar) {
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-        progressBar.style.width = scrollPercent + '%';
+    try {
+        const responses = JSON.parse(localStorage.getItem('activity_responses') || '{}');
+        responses[activityId] = {
+            data: data,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('activity_responses', JSON.stringify(responses));
+    } catch (e) {
+        console.error('Error saving activity response:', e);
     }
-});
+}
 
-// Export functions for use in module pages
+function getActivityResponse(activityId) {
+    try {
+        const responses = JSON.parse(localStorage.getItem('activity_responses') || '{}');
+        return responses[activityId]?.data || null;
+    } catch (e) {
+        console.error('Error loading activity response:', e);
+        return null;
+    }
+}
+
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu) {
+        menu.classList.toggle('hidden');
+    }
+}
+
+// Scroll Progress Bar
+function updateScrollProgress() {
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar) {
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        progressBar.style.width = `${scrolled}%`;
+    }
+}
+
+// Smooth Scroll for Anchor Links
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+    });
+}
+
+// Intersection Observer for Animations
+function initAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe cards and sections
+    document.querySelectorAll('.card-hover, .outcome-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Activity Completion Tracking
+function setupActivityTracking() {
+    // Track checkbox activities
+    document.querySelectorAll('[data-activity-checkbox]').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const activityId = this.dataset.activityId;
+            const module = this.dataset.module;
+
+            if (this.checked) {
+                markActivityComplete(module, activityId);
+            }
+        });
+    });
+}
+
+// Load saved responses on page load
+function loadSavedResponses() {
+    // Load text area responses
+    document.querySelectorAll('textarea[data-activity-id]').forEach(textarea => {
+        const activityId = textarea.dataset.activityId;
+        const savedData = getActivityResponse(activityId);
+        if (savedData && savedData.response) {
+            textarea.value = savedData.response;
+        }
+    });
+
+    // Load checkbox states
+    document.querySelectorAll('input[type="checkbox"][data-activity-id]').forEach(checkbox => {
+        const activityId = checkbox.dataset.activityId;
+        if (isActivityComplete(checkbox.dataset.module, activityId)) {
+            checkbox.checked = true;
+        }
+    });
+
+    // Load radio button states
+    document.querySelectorAll('input[type="radio"][data-activity-id]').forEach(radio => {
+        const activityId = radio.dataset.activityId;
+        const savedData = getActivityResponse(activityId);
+        if (savedData && savedData.selection === radio.value) {
+            radio.checked = true;
+        }
+    });
+}
+
+// Notification System
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-lg text-white transform transition-all duration-300 z-50 ${
+        type === 'success' ? 'bg-green-500' : 'bg-blue-500'
+    }`;
+    notification.textContent = message;
+    notification.style.opacity = '0';
+    notification.style.transform = 'translateY(20px)';
+
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateY(0)';
+    }, 10);
+
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateY(20px)';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Export functions for global use
 window.CPD = {
+    getProgress,
+    saveProgress,
     markActivityComplete,
     markModuleComplete,
-    getProgress,
-    createInteractiveQuiz,
-    startTimer,
-    validateActivityForm,
+    isActivityComplete,
+    calculateModuleProgress,
+    updateProgressDisplay,
+    resetProgress,
     saveActivityResponse,
-    getActivityResponse
+    getActivityResponse,
+    showNotification
 };
 
-console.log('CPD Course JavaScript loaded successfully');
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+    updateProgressDisplay();
+    initSmoothScroll();
+    initAnimations();
+    setupActivityTracking();
+    loadSavedResponses();
+
+    // Update scroll progress on scroll
+    window.addEventListener('scroll', updateScrollProgress);
+    updateScrollProgress();
+
+    console.log('✅ AI Tools for Teachers - Initialized');
+});

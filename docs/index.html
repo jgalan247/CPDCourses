@@ -3,255 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tools for Teachers - CPD Courses</title>
-    <meta name="description" content="Comprehensive professional development courses on AI tools for teachers">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>AI Tools for Teachers - Master AI in Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.3s;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
+    <div class="progress-bar" id="progressBar"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>🤖 AI Tools for Teachers</h1>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl">🤖</span>
+                    <span class="ml-2 text-xl font-bold gradient-text">AI Tools for Teachers</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="#modules" class="text-gray-700 hover:text-primary transition">Modules</a>
+                    <a href="#progress" class="text-gray-700 hover:text-primary transition">My Progress</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition">About</a>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#modules">Modules</a>
-                <a href="#about">About</a>
-            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4 px-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+            <a href="#modules" class="block py-2 text-gray-700 hover:text-primary">Modules</a>
+            <a href="#progress" class="block py-2 text-gray-700 hover:text-primary">My Progress</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-primary">About</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Transform Your Teaching with AI</h1>
-                <p class="hero-subtitle">Comprehensive CPD courses designed to help educators leverage artificial intelligence in their daily practice</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Modules</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">9</span>
-                        <span class="stat-label">Hours</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">15</span>
-                        <span class="stat-label">Activities</span>
-                    </div>
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Transform Your Teaching with AI
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100">
+                    Master AI tools to enhance your classroom, save time, and empower your students in the digital age
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#modules" class="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition shadow-lg">
+                        Start Learning
+                    </a>
+                    <a href="#about" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-700 transition">
+                        Learn More
+                    </a>
                 </div>
-                <a href="#modules" class="btn btn-primary">Start Learning</a>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <h2 class="section-title">What You'll Gain</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">⏰</div>
-                    <h3>Save Time</h3>
-                    <p>Reduce administrative tasks and assessment workload significantly</p>
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-primary mb-2">3</div>
+                    <div class="text-gray-600">Comprehensive Modules</div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Create Better Resources</h3>
-                    <p>Generate engaging, differentiated materials for all learners</p>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-secondary mb-2">9</div>
+                    <div class="text-gray-600">Hours of Content</div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
-                    <h3>Improve Assessment</h3>
-                    <p>Provide personalized feedback at scale with AI assistance</p>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-accent mb-2">15+</div>
+                    <div class="text-gray-600">Hands-on Activities</div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🧠</div>
-                    <h3>Empower Students</h3>
-                    <p>Teach critical AI literacy skills for the future</p>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-600 mb-2">100%</div>
+                    <div class="text-gray-600">Self-Paced Learning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What You'll Learn</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Gain practical skills to integrate AI into every aspect of your teaching practice
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3">Daily Task Automation</h3>
+                    <p class="text-gray-600">Master AI tools to streamline lesson planning, resource creation, and administrative tasks</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">📝</div>
+                    <h3 class="text-xl font-semibold mb-3">Smart Assessment</h3>
+                    <p class="text-gray-600">Create engaging quizzes, generate personalized feedback, and design effective rubrics with AI</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-semibold mb-3">Student AI Literacy</h3>
+                    <p class="text-gray-600">Teach students to use AI responsibly while maintaining academic integrity</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-semibold mb-3">Practical Tools</h3>
+                    <p class="text-gray-600">Get hands-on with ChatGPT, Brisk AI, Magic School AI, Quizizz, and more</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-semibold mb-3">Real Classroom Applications</h3>
+                    <p class="text-gray-600">Apply AI tools to your specific subject and teaching context</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-3">Ethical AI Use</h3>
+                    <p class="text-gray-600">Navigate data privacy, bias, and academic integrity considerations</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Modules Section -->
-    <section id="modules" class="modules">
-        <div class="container">
-            <h2 class="section-title">Choose Your Learning Path</h2>
-            <p class="section-subtitle">Complete all three modules for a comprehensive AI in education foundation</p>
+    <section id="modules" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Your Learning Journey</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Three comprehensive modules designed to take you from AI beginner to confident practitioner
+                </p>
+            </div>
 
-            <div class="modules-grid">
-                <!-- Module 1 -->
-                <div class="module-card">
-                    <div class="module-header module-1">
-                        <span class="module-number">Module 1</span>
-                        <h3>AI for Daily Tasks & Resource Creation</h3>
+            <!-- Module 1 -->
+            <div class="mb-12 card-hover bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden shadow-lg">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-white flex flex-col justify-center">
+                        <div class="text-sm font-semibold mb-2 opacity-90">MODULE 1</div>
+                        <h3 class="text-3xl font-bold mb-4">AI for Daily Tasks</h3>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                3 hours
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                5 Activities
+                            </span>
+                        </div>
                     </div>
-                    <div class="module-body">
-                        <p class="module-duration">⏱️ 3 hours</p>
-                        <p class="module-description">Master AI tools like Brisk AI and Magic School AI for creating differentiated resources and handling daily teaching tasks efficiently.</p>
-
-                        <div class="module-outcomes">
-                            <h4>You'll Learn To:</h4>
-                            <ul>
-                                <li>Create differentiated resources for diverse learners</li>
-                                <li>Use AI for lesson planning and materials</li>
-                                <li>Apply AI tools to real classroom scenarios</li>
-                                <li>Follow ethical AI practices</li>
+                    <div class="md:w-2/3 p-8">
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Learn to use AI tools to transform your daily teaching tasks. Master lesson planning, resource creation, and email management with AI assistance.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">You'll Learn To:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Create lesson plans in minutes with AI</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Generate differentiated resources for all learners</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Write professional emails and communications efficiently</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Use ChatGPT, Brisk AI, and Magic School AI effectively</span>
+                                </li>
                             </ul>
                         </div>
-
-                        <div class="module-topics">
-                            <h4>Topics Covered:</h4>
-                            <div class="topic-tags">
-                                <span class="tag">Brisk AI</span>
-                                <span class="tag">Magic School AI</span>
-                                <span class="tag">Differentiation</span>
-                                <span class="tag">SEND Resources</span>
-                                <span class="tag">Ethics</span>
-                            </div>
-                        </div>
-
-                        <a href="module1.html" class="btn btn-module">Start Module 1</a>
+                        <a href="module1.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Start Module 1
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Module 2 -->
-                <div class="module-card">
-                    <div class="module-header module-2">
-                        <span class="module-number">Module 2</span>
-                        <h3>AI for Assessment & Feedback</h3>
+            <!-- Module 2 -->
+            <div class="mb-12 card-hover bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl overflow-hidden shadow-lg">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-br from-purple-500 to-purple-700 p-8 text-white flex flex-col justify-center">
+                        <div class="text-sm font-semibold mb-2 opacity-90">MODULE 2</div>
+                        <h3 class="text-3xl font-bold mb-4">AI for Assessment</h3>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                3 hours
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                5 Activities
+                            </span>
+                        </div>
                     </div>
-                    <div class="module-body">
-                        <p class="module-duration">⏱️ 3 hours</p>
-                        <p class="module-prerequisite">📋 Prerequisite: Module 1 or basic AI familiarity</p>
-                        <p class="module-description">Transform your assessment practice by creating quizzes, generating personalized feedback, and analyzing student work with AI.</p>
-
-                        <div class="module-outcomes">
-                            <h4>You'll Learn To:</h4>
-                            <ul>
-                                <li>Create diverse AI-powered assessments</li>
-                                <li>Generate personalized feedback efficiently</li>
-                                <li>Design comprehensive rubrics</li>
-                                <li>Analyze student work for insights</li>
+                    <div class="md:w-2/3 p-8">
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Transform your assessment practice with AI-powered tools. Create engaging quizzes, generate personalized feedback, and analyze student work efficiently.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">You'll Learn To:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Create diverse assessments using Quizizz AI</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Generate personalized feedback at scale</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Design comprehensive rubrics and success criteria</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Analyze student work patterns for teaching insights</span>
+                                </li>
                             </ul>
                         </div>
-
-                        <div class="module-topics">
-                            <h4>Topics Covered:</h4>
-                            <div class="topic-tags">
-                                <span class="tag">Quizizz AI</span>
-                                <span class="tag">Feedback Generation</span>
-                                <span class="tag">Rubrics</span>
-                                <span class="tag">Work Analysis</span>
-                                <span class="tag">Ethics</span>
-                            </div>
-                        </div>
-
-                        <a href="module2.html" class="btn btn-module">Start Module 2</a>
+                        <a href="module2.html" class="inline-flex items-center gap-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                            Start Module 2
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Module 3 -->
-                <div class="module-card featured">
-                    <div class="featured-badge">🌟 Complete the Trilogy</div>
-                    <div class="module-header module-3">
-                        <span class="module-number">Module 3</span>
-                        <h3>Student-Facing AI Tools & Digital AI Literacy</h3>
+            <!-- Module 3 -->
+            <div class="mb-12 card-hover bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl overflow-hidden shadow-lg">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-br from-pink-500 to-pink-700 p-8 text-white flex flex-col justify-center">
+                        <div class="text-sm font-semibold mb-2 opacity-90">MODULE 3</div>
+                        <h3 class="text-3xl font-bold mb-4">Student AI Literacy</h3>
+                        <div class="flex items-center gap-4 text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                3 hours
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                5 Activities
+                            </span>
+                        </div>
                     </div>
-                    <div class="module-body">
-                        <p class="module-duration">⏱️ 3 hours</p>
-                        <p class="module-prerequisite">📋 Prerequisite: Module 1 or 2, or basic AI familiarity</p>
-                        <p class="module-description">Learn to guide students in using AI responsibly, develop their AI literacy, and create balanced classroom policies.</p>
-
-                        <div class="module-outcomes">
-                            <h4>You'll Learn To:</h4>
-                            <ul>
-                                <li>Teach students to use AI ethically</li>
-                                <li>Develop critical AI literacy skills</li>
-                                <li>Detect and address AI misuse</li>
-                                <li>Create classroom AI policies</li>
+                    <div class="md:w-2/3 p-8">
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Learn to guide students in using AI responsibly. Develop critical AI literacy skills, create balanced classroom policies, and maintain academic integrity.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">You'll Learn To:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Teach students to use AI ethically and effectively</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Develop students' critical AI literacy skills</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Detect and address AI-generated work constructively</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Create balanced classroom AI use policies</span>
+                                </li>
                             </ul>
                         </div>
-
-                        <div class="module-topics">
-                            <h4>Topics Covered:</h4>
-                            <div class="topic-tags">
-                                <span class="tag">Student Tools</span>
-                                <span class="tag">AI Literacy</span>
-                                <span class="tag">Detection</span>
-                                <span class="tag">Policies</span>
-                                <span class="tag">Academic Integrity</span>
-                            </div>
-                        </div>
-
-                        <a href="module3.html" class="btn btn-module">Start Module 3</a>
+                        <a href="module3.html" class="inline-flex items-center gap-2 bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition">
+                            Start Module 3
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Learning Pathway -->
-    <section class="pathway">
-        <div class="container">
-            <h2 class="section-title">Recommended Learning Pathway</h2>
-            <div class="pathway-steps">
-                <div class="pathway-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Foundation</h3>
-                        <p>Module 1: Learn to use AI yourself for daily tasks</p>
+    <!-- Progress Section -->
+    <section id="progress" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Your Progress</h2>
+                <p class="text-xl text-gray-600">Track your learning journey across all modules</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+                <div class="space-y-6">
+                    <!-- Module 1 Progress -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold text-gray-900">Module 1: AI for Daily Tasks</span>
+                            <span class="text-sm text-gray-600" id="module1-progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div id="module1-progress-bar" class="bg-gradient-to-r from-blue-500 to-blue-700 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 Progress -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold text-gray-900">Module 2: AI for Assessment</span>
+                            <span class="text-sm text-gray-600" id="module2-progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div id="module2-progress-bar" class="bg-gradient-to-r from-purple-500 to-purple-700 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Module 3 Progress -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold text-gray-900">Module 3: Student AI Literacy</span>
+                            <span class="text-sm text-gray-600" id="module3-progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-3">
+                            <div id="module3-progress-bar" class="bg-gradient-to-r from-pink-500 to-pink-700 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Overall Progress -->
+                    <div class="pt-6 border-t border-gray-200">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-gray-900 text-lg">Overall Progress</span>
+                            <span class="text-lg font-bold text-primary" id="overall-progress-text">0%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div id="overall-progress-bar" class="bg-gradient-to-r from-purple-500 to-pink-600 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="pathway-arrow">→</div>
-                <div class="pathway-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Professional Application</h3>
-                        <p>Module 2: Apply AI to assessment and feedback</p>
-                    </div>
-                </div>
-                <div class="pathway-arrow">→</div>
-                <div class="pathway-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Student Empowerment</h3>
-                        <p>Module 3: Guide students in responsible AI use</p>
-                    </div>
+
+                <div class="mt-8 text-center">
+                    <button onclick="resetProgress()" class="text-sm text-gray-600 hover:text-gray-900 underline">Reset Progress</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">About This Programme</h2>
-                <p>This comprehensive CPD programme provides teachers with practical skills to leverage AI in education. All modules are designed for hands-on learning with real classroom applications.</p>
-
-                <div class="about-features">
-                    <div class="feature">
-                        <h3>🎯 Practical Focus</h3>
-                        <p>Create resources you can use immediately</p>
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">About This Course</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    This comprehensive AI training program is designed specifically for teachers who want to harness the power of artificial intelligence in their classrooms. Whether you're new to AI or looking to deepen your practice, these modules provide practical, hands-on learning you can apply immediately.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Self-Paced</h3>
+                        <p class="text-gray-600">Learn at your own speed, on your own schedule</p>
                     </div>
-                    <div class="feature">
-                        <h3>🛠️ Hands-On Learning</h3>
-                        <p>60% of time spent actually using tools</p>
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Practical</h3>
+                        <p class="text-gray-600">Hands-on activities with real AI tools</p>
                     </div>
-                    <div class="feature">
-                        <h3>⚖️ Ethics-Centered</h3>
-                        <p>Responsible AI use throughout</p>
-                    </div>
-                    <div class="feature">
-                        <h3>📚 All Subjects</h3>
-                        <p>Examples across all subject areas</p>
+                    <div class="text-center">
+                        <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Teacher-Focused</h3>
+                        <p class="text-gray-600">Designed by educators, for educators</p>
                     </div>
                 </div>
             </div>
@@ -259,41 +486,32 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Transform Your Teaching?</h2>
-            <p>Start with Module 1 and build your AI skills step by step</p>
-            <a href="module1.html" class="btn btn-large">Begin Your Journey</a>
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Teaching?</h2>
+            <p class="text-xl mb-8 text-purple-100">Start your AI learning journey today</p>
+            <a href="#modules" class="inline-block bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition shadow-lg">
+                Get Started Now
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AI Tools for Teachers</h3>
-                    <p>Professional development for the AI age</p>
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <span class="text-3xl">🤖</span>
+                    <span class="ml-2 text-xl font-bold text-white">AI Tools for Teachers</span>
                 </div>
-                <div class="footer-section">
-                    <h4>Modules</h4>
-                    <ul>
-                        <li><a href="module1.html">Module 1: Daily Tasks</a></li>
-                        <li><a href="module2.html">Module 2: Assessment</a></li>
-                        <li><a href="module3.html">Module 3: Student AI Literacy</a></li>
-                    </ul>
+                <p class="text-gray-400 mb-6">Empowering educators with AI skills for the modern classroom</p>
+                <div class="flex justify-center gap-6 text-sm">
+                    <a href="#home" class="hover:text-white transition">Home</a>
+                    <a href="#modules" class="hover:text-white transition">Modules</a>
+                    <a href="#progress" class="hover:text-white transition">Progress</a>
+                    <a href="#about" class="hover:text-white transition">About</a>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="https://github.com/jgalan247/CPDCourses">GitHub Repository</a></li>
-                        <li><a href="../ONLINE-DELIVERY-GUIDE.md">Online Delivery Guide</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AI Tools for Teachers CPD. All rights reserved.</p>
-                <p>Last Updated: November 2025</p>
+                <p class="text-gray-500 text-sm mt-8">&copy; 2025 AI Tools for Teachers. All rights reserved.</p>
             </div>
         </div>
     </footer>
