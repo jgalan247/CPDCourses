@@ -3,147 +3,575 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 3: Student-Facing AI Tools & Digital AI Literacy</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/module.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Module 3: Student AI Literacy - AI Tools for Teachers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-    <div class="progress-bar"></div>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <h1>🤖 AI Tools for Teachers</h1>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="module1.html">Module 1</a>
-                <a href="module2.html">Module 2</a>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl">🤖</span>
+                        <span class="ml-2 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI Tools for Teachers</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="module1.html" class="text-gray-700 hover:text-primary transition">Module 1</a>
+                    <a href="module2.html" class="text-gray-700 hover:text-primary transition">Module 2</a>
+                    <a href="module3.html" class="text-primary font-semibold">Module 3</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="module-hero module-3-bg">
-        <div class="container">
-            <div class="module-hero-content">
-                <span class="module-badge">Module 3</span>
-                <h1>Student-Facing AI Tools & Digital AI Literacy</h1>
-                <p class="module-hero-description">Learn to guide students in using AI responsibly, develop critical AI literacy, and create balanced classroom policies</p>
-                <div class="module-meta">
-                    <span>⏱️ 3 hours</span>
-                    <span>📚 5 Activities</span>
-                    <span>🎯 All Levels</span>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-pink-500 to-pink-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-pink-400 bg-opacity-30 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    MODULE 3
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Student AI Literacy & Responsible Use</h1>
+                <p class="text-xl text-pink-100 mb-6">
+                    Learn to guide students in using AI ethically and effectively. Build critical AI literacy skills and create balanced classroom policies.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        ~3 hours
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        5 Essential Lessons
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Self-paced
+                    </span>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="module-content">
-        <div class="container">
-            <section class="content-section">
-                <h2>Module Overview</h2>
-                <div class="info-box info-primary">
-                    <h3>What You'll Learn</h3>
-                    <p>Shift focus from teachers using AI to teaching students to use AI responsibly. Learn to develop students' critical AI literacy, detect and address AI misuse constructively, and create balanced classroom policies that maintain academic integrity while embracing AI opportunities.</p>
-                </div>
-
-                <div class="learning-outcomes">
-                    <h3>Learning Outcomes</h3>
-                    <div class="outcomes-grid">
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Teach students to use AI ethically and effectively</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Design AI-enhanced lessons appropriately</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Develop students' critical AI literacy skills</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Detect and address AI-generated work</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Create classroom AI use policies</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Balance academic integrity with AI opportunities</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box info-success">
-                    <h3>🌟 Complete the Trilogy!</h3>
-                    <p>Module 3 completes your AI in education foundation. Together with Modules 1 and 2, you now have comprehensive skills covering personal competence, professional applications, and pedagogical integration.</p>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <h2>Full Module Materials</h2>
-                <div class="info-box info-tip">
-                    <p><strong>📁 Access Complete Resources:</strong> View the full session plan, activities, and materials in the <a href="../MODULE-3/">MODULE-3 folder</a>.</p>
-                </div>
-
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <h3>📋 Session Plan</h3>
-                        <p>Detailed 3-hour breakdown</p>
-                        <a href="../MODULE-3/Session-Plan.md" class="btn btn-secondary">View Plan</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🎯 Activities</h3>
-                        <p>5 hands-on exercises</p>
-                        <a href="../MODULE-3/resources/activities/" class="btn btn-secondary">See Activities</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>📝 Workbook</h3>
-                        <p>Participant materials</p>
-                        <a href="../MODULE-3/resources/handouts/Participant-Workbook.md" class="btn btn-secondary">Download</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🛠️ Tools Directory</h3>
-                        <p>Student AI tools guide</p>
-                        <a href="../MODULE-3/resources/showcase/Student-AI-Tools-Directory.md" class="btn btn-secondary">View Directory</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="next-steps">
-                <h2>What's Next?</h2>
-                <div class="next-steps-content">
-                    <div class="next-step-card">
-                        <h3>🎓 You've Completed the Trilogy!</h3>
-                        <p>You now have comprehensive AI in education skills. Implement your learning and share with colleagues.</p>
-                        <a href="index.html" class="btn btn-primary">Back to Home</a>
-                    </div>
-
-                    <div class="next-step-card">
-                        <h3>Review Previous Modules</h3>
-                        <p>Revisit Modules 1 and 2 anytime to refresh your skills</p>
-                        <a href="index.html#modules" class="btn btn-secondary">View All Modules</a>
-                    </div>
-                </div>
-            </section>
+    <!-- Progress Indicator -->
+    <div class="bg-white border-b border-gray-200 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-medium text-gray-700">Your Progress</span>
+                <span class="text-sm font-medium text-pink-600" id="module3-progress-text">0%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="module3-progress-bar" class="bg-gradient-to-r from-pink-500 to-pink-700 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
         </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Learning Outcomes -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What You'll Learn</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Guide Student AI Use</h3>
+                    <p class="text-gray-600 text-sm">Teach students to use AI tools ethically and effectively for learning</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Build Critical AI Literacy</h3>
+                    <p class="text-gray-600 text-sm">Develop students' ability to question, evaluate, and think critically about AI</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Address AI Misuse Constructively</h3>
+                    <p class="text-gray-600 text-sm">Detect and respond to AI-generated work as a teaching opportunity</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Create Balanced Policies</h3>
+                    <p class="text-gray-600 text-sm">Design classroom AI policies that maintain integrity while embracing opportunity</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Design AI-Enhanced Tasks</h3>
+                    <p class="text-gray-600 text-sm">Create assignments where AI supports rather than replaces learning</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Navigate Student AI Tools</h3>
+                    <p class="text-gray-600 text-sm">Understand the AI tools students are using and their educational value</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 1: Understanding Student AI Tools -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-pink-500 to-pink-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">1</div>
+                        <h2 class="text-2xl font-bold">Understanding Student AI Tools</h2>
+                    </div>
+                    <p class="text-pink-100">Learn about the AI tools your students are actually using</p>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Reality Check</h3>
+                    <p class="text-gray-700 mb-6">
+                        Your students are already using AI—whether we like it or not. ChatGPT, Quillbot, Grammarly, Photomath, and dozens of other tools are freely available on their phones. The question isn't "Should we allow AI?" but rather "How do we teach them to use it responsibly?"
+                    </p>
+
+                    <div class="bg-pink-50 border-l-4 border-pink-500 p-4 mb-6">
+                        <p class="font-semibold text-pink-900 mb-2">💡 Shift in Mindset</p>
+                        <p class="text-pink-800">Instead of fighting against AI use, we need to teach WITH it. Just as we taught students to evaluate Wikipedia, we now teach them to use AI as a learning tool—not a replacement for thinking.</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Popular Student AI Tools</h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-5 rounded-lg border border-purple-200">
+                            <div class="flex items-start gap-3 mb-3">
+                                <span class="text-2xl">💬</span>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 mb-2">ChatGPT & Claude</h4>
+                                    <p class="text-sm text-gray-600 mb-2">General-purpose AI chatbots for writing, research, and problem-solving</p>
+                                    <div class="flex gap-2 text-xs">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Learning Potential: HIGH</span>
+                                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded">Misuse Risk: HIGH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-5 rounded-lg border border-blue-200">
+                            <div class="flex items-start gap-3 mb-3">
+                                <span class="text-2xl">✍️</span>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 mb-2">Quillbot & Grammarly</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Paraphrasing and grammar checking tools</p>
+                                    <div class="flex gap-2 text-xs">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Learning Potential: MEDIUM</span>
+                                        <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded">Misuse Risk: MEDIUM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-5 rounded-lg border border-green-200">
+                            <div class="flex items-start gap-3 mb-3">
+                                <span class="text-2xl">📊</span>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 mb-2">Photomath & Mathway</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Scan math problems and get step-by-step solutions</p>
+                                    <div class="flex gap-2 text-xs">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Learning Potential: HIGH</span>
+                                        <span class="px-2 py-1 bg-red-100 text-red-800 rounded">Misuse Risk: HIGH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-5 rounded-lg border border-yellow-200">
+                            <div class="flex items-start gap-3 mb-3">
+                                <span class="text-2xl">🔍</span>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-gray-900 mb-2">Perplexity AI</h4>
+                                    <p class="text-sm text-gray-600 mb-2">AI-powered search with cited sources</p>
+                                    <div class="flex gap-2 text-xs">
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Learning Potential: HIGH</span>
+                                        <span class="px-2 py-1 bg-green-100 text-green-800 rounded">Misuse Risk: LOW</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
+                        <p class="font-semibold text-yellow-900 mb-2">⚡ Quick Tip</p>
+                        <p class="text-yellow-800 text-sm">Ask your students which AI tools they're using. You might be surprised! This conversation alone can be valuable for understanding their perspective.</p>
+                    </div>
+
+                    <!-- Activity 1 -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Explore Student AI Tools</h3>
+                                <p class="text-sm text-gray-600">Time: 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Task: Test Drive 2-3 Student Tools</p>
+                            <p class="text-gray-700 mb-4">Experience firsthand what your students are using. Try at least 2 tools from different categories:</p>
+
+                            <div class="space-y-3 mb-4">
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <p class="font-medium text-purple-900">Option 1: ChatGPT for homework</p>
+                                    <p class="text-sm text-purple-700">Ask it to write an essay on a topic you teach. See what it produces.</p>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <p class="font-medium text-blue-900">Option 2: Quillbot for paraphrasing</p>
+                                    <p class="text-sm text-blue-700">Copy a paragraph and see how it rephrases it. Would you catch this?</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <p class="font-medium text-green-900">Option 3: Photomath for problem solving</p>
+                                    <p class="text-sm text-green-700">Scan a math problem and review the step-by-step solution. Is it educational?</p>
+                                </div>
+                            </div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Reflect: What surprised you? How might students use this?</label>
+                            <textarea
+                                id="activity1-response"
+                                data-activity-id="activity1"
+                                data-module="module3"
+                                rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
+                                placeholder="Example: 'I tried ChatGPT with a Year 9 essay prompt. The output was surprisingly sophisticated - better than many of my students' first drafts. However, it lacked personal voice and specific examples from our classroom discussions. This helped me understand why requiring personal reflection and class-specific examples is crucial.'"></textarea>
+
+                            <button onclick="saveActivity1()" class="mt-4 bg-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition">
+                                Save & Mark Complete ✓
+                            </button>
+                        </div>
+
+                        <div class="bg-yellow-100 p-4 rounded-lg">
+                            <p class="text-sm text-yellow-900"><strong>💡 Key Insight:</strong> Understanding these tools from a student's perspective is the first step in teaching responsible AI use. You can't guide what you don't understand!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 2: Teaching Critical AI Literacy -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">2</div>
+                        <h2 class="text-2xl font-bold">Building Critical AI Literacy</h2>
+                    </div>
+                    <p class="text-purple-100">Teach students to think critically about AI outputs</p>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The 4 Pillars of AI Literacy</h3>
+                    <p class="text-gray-700 mb-6">
+                        AI literacy isn't just about knowing how to use AI tools—it's about understanding what AI is, how it works, its limitations, and its impact on society. Here's what students need to learn:
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold">1</div>
+                                <h4 class="font-semibold text-gray-900">Understanding AI</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span>What is AI? (Patterns in data, not magic)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span>How does ChatGPT generate text?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-blue-500 mt-0.5">•</span>
+                                    <span>Why does AI sometimes "hallucinate" facts?</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-6 rounded-xl border-2 border-purple-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold">2</div>
+                                <h4 class="font-semibold text-gray-900">Evaluating AI Output</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span>Is this information accurate?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span>What sources should I check?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-purple-500 mt-0.5">•</span>
+                                    <span>Is there bias in this response?</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl border-2 border-green-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold">3</div>
+                                <h4 class="font-semibold text-gray-900">Using AI Responsibly</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 mt-0.5">•</span>
+                                    <span>When is AI use appropriate vs cheating?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 mt-0.5">•</span>
+                                    <span>How do I cite AI-assisted work?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500 mt-0.5">•</span>
+                                    <span>What data am I sharing with AI tools?</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-pink-50 p-6 rounded-xl border-2 border-pink-200">
+                            <div class="flex items-center gap-3 mb-3">
+                                <div class="w-10 h-10 bg-pink-500 rounded-lg flex items-center justify-center text-white font-bold">4</div>
+                                <h4 class="font-semibold text-gray-900">AI & Society</h4>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-500 mt-0.5">•</span>
+                                    <span>How will AI impact future careers?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-500 mt-0.5">•</span>
+                                    <span>What are the ethical concerns with AI?</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-pink-500 mt-0.5">•</span>
+                                    <span>How can AI perpetuate bias and inequality?</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Practical Classroom Activities</h3>
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg mb-6">
+                        <h4 class="font-semibold text-gray-900 mb-4">🎓 Try These with Your Students:</h4>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">The "Spot the Fake" Challenge</p>
+                                <p class="text-sm text-gray-600">Give students 5 paragraphs—some AI-generated, some human-written. Can they tell the difference? Discuss clues.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">The "Fact-Check Challenge"</p>
+                                <p class="text-sm text-gray-600">Ask ChatGPT a question in your subject area. Have students verify every fact. How accurate is it?</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">The "Prompt Engineering" Game</p>
+                                <p class="text-sm text-gray-600">Challenge students to get the best response from AI through improving their questions. Teach them effective prompting!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-purple-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Design an AI Literacy Lesson</h3>
+                                <p class="text-sm text-gray-600">Time: 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Task: Plan a 15-Minute AI Literacy Activity</p>
+                            <p class="text-gray-700 mb-4">Choose one of the 4 pillars and design a quick activity to teach it to your students.</p>
+
+                            <div class="space-y-4">
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task1"
+                                        data-module="module3"
+                                        class="mt-1 w-5 h-5 text-pink-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 1: Choose your pillar</p>
+                                        <p class="text-sm text-gray-600 mt-1">Understanding AI, Evaluating Output, Using Responsibly, or AI & Society</p>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task2"
+                                        data-module="module3"
+                                        class="mt-1 w-5 h-5 text-pink-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 2: Design your activity</p>
+                                        <p class="text-sm text-gray-600 mt-1">What will students DO to learn this concept? Make it hands-on and engaging</p>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task3"
+                                        data-module="module3"
+                                        class="mt-1 w-5 h-5 text-pink-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 3: Plan your delivery</p>
+                                        <p class="text-sm text-gray-600 mt-1">Write out your timing, materials needed, and key discussion questions</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-100 p-4 rounded-lg">
+                            <p class="text-sm text-purple-900"><strong>💡 Pro Tip:</strong> Start small! Even a 10-minute discussion about AI can plant seeds of critical thinking. You don't need a full unit plan—just begin the conversation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Completion Message -->
+        <div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white text-center">
+            <div class="text-5xl mb-4">🎉</div>
+            <h3 class="text-2xl font-bold mb-4">Congratulations on Completing the Journey!</h3>
+            <p class="text-purple-100 mb-6 max-w-2xl mx-auto">
+                You've completed all three modules! You now have the skills to use AI for your own productivity (Module 1), transform your assessment practice (Module 2), and guide students in responsible AI use (Module 3).
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html" class="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition">
+                    Back to Home
+                </a>
+                <a href="module1.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition">
+                    Review Modules
+                </a>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../MODULE-3/resources/showcase/Student-AI-Tools-Directory.md" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🛠️</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Student Tools Directory</h3>
+                    <p class="text-sm text-gray-600">Complete guide to 20+ student AI tools</p>
+                </a>
+
+                <a href="../MODULE-3/resources/activities/" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">All Activities</h3>
+                    <p class="text-sm text-gray-600">5 hands-on AI literacy activities</p>
+                </a>
+
+                <a href="../MODULE-3/resources/handouts/Participant-Workbook.md" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Policy Templates</h3>
+                    <p class="text-sm text-gray-600">Classroom AI use policy examples</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AI Tools for Teachers CPD. <a href="index.html">Back to Home</a></p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">&copy; 2025 AI Tools for Teachers. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="module1.html" class="hover:text-white transition">Module 1</a>
+                <a href="module2.html" class="hover:text-white transition">Module 2</a>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Activity 1 Save Function
+        function saveActivity1() {
+            const response = document.getElementById('activity1-response').value;
+            if (response.trim()) {
+                window.CPD.saveActivityResponse('module3-activity1', { response });
+                window.CPD.markActivityComplete('module3', 'activity1');
+                window.CPD.showNotification('✅ Excellent! Your reflection has been saved.');
+            } else {
+                alert('Please share your reflection on the AI tools first.');
+            }
+        }
+
+        // Track Activity 2 checkboxes
+        document.querySelectorAll('[data-activity-checkbox]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    window.CPD.markActivityComplete('module3', this.dataset.activityId);
+
+                    // Check if all Activity 2 tasks are complete
+                    const allChecked = Array.from(document.querySelectorAll('[data-activity-id^="activity2"]'))
+                        .every(cb => cb.checked);
+                    if (allChecked) {
+                        window.CPD.showNotification('🎉 Activity 2 complete! You\'re ready to teach AI literacy!');
+                    }
+                }
+            });
+        });
+
+        // Update progress display on load
+        window.addEventListener('load', () => {
+            window.CPD.updateProgressDisplay();
+        });
+    </script>
 </body>
 </html>
