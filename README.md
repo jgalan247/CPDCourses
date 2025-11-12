@@ -10,6 +10,7 @@ This CPD programme helps teachers discover and implement AI tools that can:
 - Provide personalized feedback at scale
 - Support diverse learners including those with SEND needs
 - Analyze student work to inform teaching decisions
+- Empower students with critical AI literacy skills
 - Enhance teaching practice through intelligent automation
 
 ## Available Modules
@@ -57,6 +58,33 @@ This CPD programme helps teachers discover and implement AI tools that can:
 
 [📁 Access Module 2 Materials](./MODULE-2/)
 
+---
+
+### Module 3: Student-Facing AI Tools & Digital AI Literacy (3 hours)
+**Audience:** Teachers (all levels, all subjects)
+**Prerequisite:** Module 1 or 2, or basic AI familiarity
+
+**Learning Outcomes:**
+- Teach students to use AI tools ethically and effectively
+- Design lessons that incorporate student-facing AI appropriately
+- Develop students' critical AI literacy skills
+- Detect AI-generated student work and respond appropriately
+- Create classroom policies for responsible AI use
+- Evaluate age-appropriate AI tools for different year groups
+- Guide student research, creativity, and learning with AI
+- Address academic integrity while embracing AI opportunities
+
+**Topics Covered:**
+- Student AI tools landscape (ChatGPT, Perplexity, Grammarly, creative AI, study tools)
+- Teaching the 4 Pillars of AI Literacy (Understanding, Critical Evaluation, Ethical Use, Effective Use)
+- Detecting and addressing AI misuse constructively
+- AI-enhanced lesson design (not AI-replaced learning)
+- Creating balanced classroom AI policies
+- Age-appropriate approaches (KS2-KS5)
+- Academic integrity in an AI world
+
+[📁 Access Module 3 Materials](./MODULE-3/)
+
 ## Repository Structure
 
 ```
@@ -74,14 +102,26 @@ CPDCourses/
 │   ├── facilitator-guide/             # For workshop leaders
 │   └── assessments/                   # Pre/post evaluations
 │
-└── MODULE-2/                          # Module 2: Assessment & Feedback
+├── MODULE-2/                          # Module 2: Assessment & Feedback
+│   ├── README.md                      # Module overview and navigation
+│   ├── Session-Plan.md                # Detailed 3-hour session plan
+│   ├── resources/                     # All workshop resources
+│   │   ├── activities/                # Interactive activities
+│   │   ├── handouts/                  # Participant materials
+│   │   ├── showcase/                  # Tool demonstrations
+│   │   └── templates/                 # Assessment & feedback templates
+│   ├── facilitator-guide/             # For workshop leaders
+│   └── assessments/                   # Pre/post evaluations
+│
+└── MODULE-3/                          # Module 3: Student AI Literacy
     ├── README.md                      # Module overview and navigation
     ├── Session-Plan.md                # Detailed 3-hour session plan
     ├── resources/                     # All workshop resources
     │   ├── activities/                # Interactive activities
     │   ├── handouts/                  # Participant materials
-    │   ├── showcase/                  # Tool demonstrations
-    │   └── templates/                 # Assessment & feedback templates
+    │   ├── showcase/                  # Student AI tools directory
+    │   ├── templates/                 # Policy & lesson templates
+    │   └── lesson-examples/           # Age-appropriate examples (KS2-KS5)
     ├── facilitator-guide/             # For workshop leaders
     └── assessments/                   # Pre/post evaluations
 ```
@@ -90,21 +130,28 @@ CPDCourses/
 
 ### Recommended Learning Pathway
 
-**Module 1: Foundation**
+**Module 1: Foundation (Teachers Using AI)**
 Start here to learn AI tools for resource creation and daily tasks.
 
-**Module 2: Building on Skills**
+**Module 2: Professional Applications (Teachers Using AI for Assessment)**
 After Module 1, advance to assessment and feedback applications.
+
+**Module 3: Student Empowerment (Teaching Students to Use AI)**
+Complete the trilogy by learning to guide students in responsible AI use.
+
+**Together:** These three modules create a complete AI in education foundation covering personal competence, professional applications, and pedagogical integration.
 
 ### For Different Roles
 
 **For Facilitators:**
 - Module 1: [Facilitator Guide](./MODULE-1/facilitator-guide/Facilitator-Notes.md)
 - Module 2: [Facilitator Guide](./MODULE-2/facilitator-guide/Facilitator-Notes.md)
+- Module 3: [Facilitator Guide](./MODULE-3/facilitator-guide/Facilitator-Notes.md)
 
 **For Participants:**
 - Module 1: [Overview](./MODULE-1/README.md) | [Session Plan](./MODULE-1/Session-Plan.md)
 - Module 2: [Overview](./MODULE-2/README.md) | [Session Plan](./MODULE-2/Session-Plan.md)
+- Module 3: [Overview](./MODULE-3/README.md) | [Session Plan](./MODULE-3/Session-Plan.md)
 
 **For Self-Study:**
 Follow the session plans at your own pace, completing activities as you go.
