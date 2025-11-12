@@ -3,466 +3,491 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 1: AI for Daily Tasks & Resource Creation</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/module.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Module 1: AI for Daily Tasks - AI Tools for Teachers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-    <!-- Progress Bar -->
-    <div class="progress-bar"></div>
-
+<body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <h1>🤖 AI Tools for Teachers</h1>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="module2.html">Module 2</a>
-                <a href="module3.html">Module 3</a>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl">🤖</span>
+                        <span class="ml-2 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI Tools for Teachers</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="module1.html" class="text-primary font-semibold">Module 1</a>
+                    <a href="module2.html" class="text-gray-700 hover:text-primary transition">Module 2</a>
+                    <a href="module3.html" class="text-gray-700 hover:text-primary transition">Module 3</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Module Header -->
-    <header class="module-hero module-1-bg">
-        <div class="container">
-            <div class="module-hero-content">
-                <span class="module-badge">Module 1</span>
-                <h1>AI for Daily Tasks & Resource Creation</h1>
-                <p class="module-hero-description">Master AI tools for creating differentiated resources and handling daily teaching tasks efficiently</p>
-                <div class="module-meta">
-                    <span>⏱️ 3 hours</span>
-                    <span>📚 5 Activities</span>
-                    <span>🎯 All Levels</span>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-500 to-blue-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-blue-400 bg-opacity-30 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    MODULE 1
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">AI for Daily Tasks & Resource Creation</h1>
+                <p class="text-xl text-blue-100 mb-6">
+                    Learn to use AI tools to save time, create better resources, and focus on what matters most - your students.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        ~3 hours
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        5 Hands-on Lessons
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Self-paced
+                    </span>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Module Navigation -->
-    <div class="module-nav-container">
-        <nav class="module-nav">
-            <div class="container">
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#session-plan">Session Plan</a></li>
-                    <li><a href="#activities">Activities</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                </ul>
+    <!-- Progress Indicator -->
+    <div class="bg-white border-b border-gray-200 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-medium text-gray-700">Your Progress</span>
+                <span class="text-sm font-medium text-blue-600" id="module1-progress-text">0%</span>
             </div>
-        </nav>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="module1-progress-bar" class="bg-gradient-to-r from-blue-500 to-blue-700 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Main Content -->
-    <main class="module-content">
-        <div class="container">
-            <!-- Overview Section -->
-            <section id="overview" class="content-section">
-                <h2>Module Overview</h2>
-                <div class="info-box info-primary">
-                    <h3>What You'll Learn</h3>
-                    <p>This intensive 3-hour workshop introduces teachers to practical AI tools that can transform daily work. You'll explore how artificial intelligence can save time, create differentiated resources, and support diverse learners including those with Special Educational Needs.</p>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Learning Outcomes -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What You'll Learn</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Save Time Daily</h3>
+                    <p class="text-gray-600 text-sm">Identify and automate 5-10 time-consuming teaching tasks with AI assistance</p>
                 </div>
 
-                <div class="learning-outcomes">
-                    <h3>Learning Outcomes</h3>
-                    <div class="outcomes-grid">
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Identify 5-10 daily teaching tasks where AI can save time</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Use Brisk AI to create instant classroom resources</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Use Magic School AI for comprehensive lesson planning</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Create differentiated resources for diverse learners</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Apply ethical AI practices in educational contexts</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Evaluate AI-generated content for accuracy</p>
-                        </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Create Resources Instantly</h3>
+                    <p class="text-gray-600 text-sm">Use Brisk AI to generate classroom materials in seconds</p>
                 </div>
 
-                <div class="tools-covered">
-                    <h3>Tools You'll Master</h3>
-                    <div class="tools-grid">
-                        <div class="tool-card">
-                            <h4>Brisk AI</h4>
-                            <p>Chrome extension for quick classroom tools and instant resource creation</p>
-                        </div>
-                        <div class="tool-card">
-                            <h4>Magic School AI</h4>
-                            <p>Comprehensive platform for lesson planning, assessments, and differentiation</p>
-                        </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
                     </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Plan Comprehensive Lessons</h3>
+                    <p class="text-gray-600 text-sm">Master Magic School AI for full lesson planning and differentiation</p>
                 </div>
-            </section>
 
-            <!-- Session Plan Section -->
-            <section id="session-plan" class="content-section">
-                <h2>Session Plan (3 Hours)</h2>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">1</div>
-                        <div class="timeline-content">
-                            <h3>Welcome & AI Icebreaker (0:00-0:20)</h3>
-                            <p>Get everyone using AI immediately with a fun icebreaker challenge. Build confidence in a safe environment.</p>
-                            <ul>
-                                <li>Welcome & housekeeping</li>
-                                <li>Learning outcomes overview</li>
-                                <li>Activity 1: AI Icebreaker Challenge</li>
-                            </ul>
-                        </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">2</div>
-                        <div class="timeline-content">
-                            <h3>Brisk AI Showcase (0:20-0:50)</h3>
-                            <p>Discover quick wins with Brisk AI's teacher-specific tools.</p>
-                            <ul>
-                                <li>Introduction to Brisk AI</li>
-                                <li>Live demonstration of 5 key features</li>
-                                <li>Activity 2: Hands-on Brisk practice</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item break">
-                        <div class="timeline-marker">☕</div>
-                        <div class="timeline-content">
-                            <h3>Break (0:50-1:00)</h3>
-                            <p>10-minute break</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">3</div>
-                        <div class="timeline-content">
-                            <h3>Magic School AI Showcase (1:00-1:30)</h3>
-                            <p>Explore comprehensive planning with Magic School AI.</p>
-                            <ul>
-                                <li>Magic School AI platform overview</li>
-                                <li>Demonstration of 6 key tools</li>
-                                <li>Activity 3: Create substantial resource</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">4</div>
-                        <div class="timeline-content">
-                            <h3>Differentiation Deep Dive (1:30-2:00)</h3>
-                            <p>Learn to create accessible resources for all learners.</p>
-                            <ul>
-                                <li>Why AI excels at differentiation</li>
-                                <li>Examples across SEND needs</li>
-                                <li>Activity 4: Create differentiated versions</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item break">
-                        <div class="timeline-marker">☕</div>
-                        <div class="timeline-content">
-                            <h3>Break (2:00-2:10)</h3>
-                            <p>10-minute break</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">5</div>
-                        <div class="timeline-content">
-                            <h3>Create Your Own Resources (2:10-2:40)</h3>
-                            <p>Put it all together and create resources for THIS WEEK.</p>
-                            <ul>
-                                <li>The Creation Challenge</li>
-                                <li>Activity 5: Build your resource pack</li>
-                                <li>Save and organize your work</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker">6</div>
-                        <div class="timeline-content">
-                            <h3>Sharing & Next Steps (2:40-3:00)</h3>
-                            <p>Celebrate creations and plan implementation.</p>
-                            <ul>
-                                <li>Showcase gallery</li>
-                                <li>Key takeaways & ethics</li>
-                                <li>Action planning</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Differentiate with Ease</h3>
+                    <p class="text-gray-600 text-sm">Create multiple versions of resources for diverse learner needs</p>
                 </div>
-            </section>
 
-            <!-- Activities Section -->
-            <section id="activities" class="content-section">
-                <h2>Interactive Activities</h2>
-
-                <!-- Activity 1 -->
-                <div class="activity-card">
-                    <div class="activity-header">
-                        <h3>Activity 1: AI Icebreaker Challenge</h3>
-                        <span class="activity-duration">⏱️ 10 minutes</span>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
                     </div>
-                    <div class="activity-body">
-                        <p><strong>Objective:</strong> Get everyone using AI immediately, build confidence, have fun!</p>
+                    <h3 class="font-semibold text-gray-900 mb-2">Use AI Ethically</h3>
+                    <p class="text-gray-600 text-sm">Understand best practices for responsible AI use in education</p>
+                </div>
 
-                        <div class="activity-instructions">
-                            <h4>Instructions:</h4>
-                            <ol>
-                                <li>Pair up with a colleague (or work individually)</li>
-                                <li>Use ChatGPT or any AI tool to create the most creative icebreaker question for a Year 7 class</li>
-                                <li>Time limit: 5 minutes to create</li>
-                                <li>Share your best creation</li>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Evaluate AI Outputs</h3>
+                    <p class="text-gray-600 text-sm">Critically assess and refine AI-generated content for accuracy</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 1: Getting Started with ChatGPT -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">1</div>
+                        <h2 class="text-2xl font-bold">Getting Started with AI</h2>
+                    </div>
+                    <p class="text-blue-100">Learn the basics of using ChatGPT and other AI tools for teaching tasks</p>
+                </div>
+
+                <div class="p-8">
+                    <div class="prose max-w-none">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Why AI for Teachers?</h3>
+                        <p class="text-gray-700 mb-6">
+                            As a teacher, you're constantly juggling lesson planning, resource creation, differentiation, assessment, and communication. AI tools like ChatGPT can help you work smarter, not harder, giving you more time to focus on what truly matters—your students.
+                        </p>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                            <p class="font-semibold text-blue-900 mb-2">💡 Key Insight</p>
+                            <p class="text-blue-800">AI is not here to replace teachers—it's here to give you superpowers. Think of it as a tireless teaching assistant available 24/7.</p>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Access ChatGPT</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                            <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                                <li>Go to <a href="https://chat.openai.com" target="_blank" class="text-blue-600 hover:underline">chat.openai.com</a></li>
+                                <li>Create a free account (or log in if you have one)</li>
+                                <li>You're ready to start! The free version is powerful enough for most teaching tasks</li>
                             </ol>
                         </div>
 
-                        <div class="activity-interactive">
-                            <h4>Try It Now:</h4>
-                            <textarea id="activity1-response" rows="4" placeholder="Paste your AI-generated icebreaker question here..."></textarea>
-                            <button class="btn btn-primary" onclick="saveActivity1()">Save My Response</button>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Write Effective Prompts</h3>
+                        <p class="text-gray-700 mb-4">The secret to getting great results from AI is writing clear, specific prompts. Here's the formula:</p>
+
+                        <div class="grid md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                <p class="font-semibold text-red-900 mb-2">❌ Vague Prompt</p>
+                                <p class="text-sm text-red-800 italic">"Create a lesson plan about photosynthesis"</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <p class="font-semibold text-green-900 mb-2">✅ Specific Prompt</p>
+                                <p class="text-sm text-green-800 italic">"Create a 45-minute lesson plan on photosynthesis for Year 7 students (ages 11-12). Include a starter activity, main activity with visuals, and an exit ticket. Align with UK science curriculum."</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-purple-50 p-6 rounded-lg mb-6">
+                            <h4 class="font-semibold text-purple-900 mb-3">📝 The Perfect Prompt Formula:</h4>
+                            <ul class="space-y-2 text-purple-800">
+                                <li><strong>Role:</strong> "You are an experienced [subject] teacher..."</li>
+                                <li><strong>Task:</strong> "Create/Generate/Write..."</li>
+                                <li><strong>Context:</strong> "For [year group/age], [ability level]..."</li>
+                                <li><strong>Format:</strong> "In the format of [list/table/paragraph]..."</li>
+                                <li><strong>Constraints:</strong> "Keep it under [length], use [reading level]..."</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Activity 1 -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Your First AI-Generated Resource</h3>
+                                <p class="text-sm text-gray-600">Time: 10 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Task: Create an Icebreaker Question</p>
+                            <p class="text-gray-700 mb-4">Use ChatGPT to create a creative icebreaker question for your next class. Make it fun, relevant, and engaging!</p>
+
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <p class="text-sm font-semibold text-blue-900 mb-2">Example Prompt:</p>
+                                <p class="text-sm text-blue-800 italic">"Create 3 creative icebreaker questions for a Year 9 English class. Make them fun, thought-provoking, and related to storytelling or literature. Avoid generic questions."</p>
+                            </div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Paste your AI-generated icebreaker here:</label>
+                            <textarea
+                                id="activity1-response"
+                                data-activity-id="activity1"
+                                data-module="module1"
+                                rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                placeholder="Example: 'If you could have dinner with any fictional character, who would it be and what would you ask them?'"></textarea>
+
+                            <button onclick="saveActivity1()" class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                Save & Mark Complete ✓
+                            </button>
+                        </div>
+
+                        <div class="bg-yellow-100 p-4 rounded-lg">
+                            <p class="text-sm text-yellow-900"><strong>💡 Reflection:</strong> How does this icebreaker compare to ones you've used before? Could you use AI to generate more for future lessons?</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Activity 2 -->
-                <div class="activity-card">
-                    <div class="activity-header">
-                        <h3>Activity 2: Brisk AI Quick Wins</h3>
-                        <span class="activity-duration">⏱️ 15 minutes</span>
+        <!-- Lesson 2: Brisk AI -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">2</div>
+                        <h2 class="text-2xl font-bold">Brisk AI: Quick Classroom Resources</h2>
                     </div>
-                    <div class="activity-body">
-                        <p><strong>Objective:</strong> Create 3 usable resources using Brisk AI</p>
+                    <p class="text-purple-100">Create instant resources while browsing the web</p>
+                </div>
 
-                        <div class="activity-checklist">
-                            <h4>Complete These Challenges:</h4>
-                            <div class="checklist">
-                                <label>
-                                    <input type="checkbox" id="brisk1">
-                                    <span>Challenge 1: Create a quiz from any article</span>
+                <div class="p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">What is Brisk AI?</h3>
+                    <p class="text-gray-700 mb-6">
+                        Brisk is a Chrome extension that gives you instant access to teacher-specific AI tools. It can turn any webpage into a quiz, differentiate text, create lesson plans, and more—all with just a few clicks.
+                    </p>
+
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-6">
+                        <h4 class="font-semibold text-gray-900 mb-3">🚀 How to Install Brisk AI:</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <li>Open Chrome browser</li>
+                            <li>Visit <a href="https://www.briskteaching.com/" target="_blank" class="text-blue-600 hover:underline font-semibold">briskteaching.com</a></li>
+                            <li>Click "Add to Chrome" (it's free!)</li>
+                            <li>Create an account</li>
+                            <li>You'll see the Brisk icon (✨) in your browser toolbar</li>
+                        </ol>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">5 Powerful Brisk Features:</h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">📝</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">1. Article to Quiz</h4>
+                                    <p class="text-sm text-gray-600">Turn any online article into a comprehension quiz in seconds</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">📚</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">2. Text Leveler</h4>
+                                    <p class="text-sm text-gray-600">Adjust reading difficulty for different student abilities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">🎯</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">3. Learning Objectives</h4>
+                                    <p class="text-sm text-gray-600">Generate clear, curriculum-aligned learning objectives</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">✉️</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">4. Email Generator</h4>
+                                    <p class="text-sm text-gray-600">Draft professional emails to parents and colleagues</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-5 rounded-lg border border-gray-200">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">📋</span>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">5. Presentation Generator</h4>
+                                    <p class="text-sm text-gray-600">Create Google Slides presentations from topics or outlines</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-2 border-purple-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-purple-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Brisk AI Challenges</h3>
+                                <p class="text-sm text-gray-600">Time: 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Complete These 3 Challenges:</p>
+
+                            <div class="space-y-4">
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task1"
+                                        data-module="module1"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Challenge 1: Create a Quiz</p>
+                                        <p class="text-sm text-gray-600 mt-1">Find any educational article online (BBC News, National Geographic, etc.) and use Brisk to generate a 5-question quiz from it.</p>
+                                    </div>
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="brisk2">
-                                    <span>Challenge 2: Differentiate text for 2 different levels</span>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task2"
+                                        data-module="module1"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Challenge 2: Level Text</p>
+                                        <p class="text-sm text-gray-600 mt-1">Take any complex text and use Brisk's Text Leveler to create 2 versions: one for struggling readers and one for advanced readers.</p>
+                                    </div>
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="brisk3">
-                                    <span>Challenge 3: Create learning objectives for your next lesson</span>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task3"
+                                        data-module="module1"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Challenge 3: Generate Learning Objectives</p>
+                                        <p class="text-sm text-gray-600 mt-1">Think of your next lesson topic and use Brisk to create 3-5 clear learning objectives.</p>
+                                    </div>
                                 </label>
                             </div>
                         </div>
 
-                        <div class="info-box info-tip">
-                            <strong>💡 Tip:</strong> Brisk is a Chrome extension. Install it from <a href="https://www.briskteaching.com/" target="_blank">briskteaching.com</a>
+                        <div class="bg-purple-100 p-4 rounded-lg">
+                            <p class="text-sm text-purple-900"><strong>💡 Pro Tip:</strong> Bookmark Brisk's toolbar in your browser. It's now your fastest way to create resources while lesson planning!</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Activity 3 -->
-                <div class="activity-card">
-                    <div class="activity-header">
-                        <h3>Activity 3: Magic School Deep Dive</h3>
-                        <span class="activity-duration">⏱️ 10 minutes</span>
-                    </div>
-                    <div class="activity-body">
-                        <p><strong>Objective:</strong> Create one substantial resource using Magic School AI</p>
-
-                        <div class="activity-options">
-                            <h4>Choose ONE:</h4>
-                            <div class="options-grid">
-                                <div class="option-card">
-                                    <input type="radio" name="activity3-option" id="option-a" value="lesson-plan">
-                                    <label for="option-a">
-                                        <h4>Option A</h4>
-                                        <p>Create a full lesson plan for next week</p>
-                                    </label>
-                                </div>
-                                <div class="option-card">
-                                    <input type="radio" name="activity3-option" id="option-b" value="assessment">
-                                    <label for="option-b">
-                                        <h4>Option B</h4>
-                                        <p>Create an assessment for upcoming unit</p>
-                                    </label>
-                                </div>
-                                <div class="option-card">
-                                    <input type="radio" name="activity3-option" id="option-c" value="accommodations">
-                                    <label for="option-c">
-                                        <h4>Option C</h4>
-                                        <p>Create accommodation suggestions for a student</p>
-                                    </label>
-                                </div>
-                                <div class="option-card">
-                                    <input type="radio" name="activity3-option" id="option-d" value="report-comments">
-                                    <label for="option-d">
-                                        <h4>Option D</h4>
-                                        <p>Generate report card comments for 3 students</p>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="activity-reflection">
-                            <h4>Reflection:</h4>
-                            <p>What did you create?</p>
-                            <textarea id="activity3-reflection" rows="3" placeholder="Describe what you created and how you'll use it..."></textarea>
-                            <button class="btn btn-primary" onclick="saveActivity3()">Save Reflection</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- More activities would follow same pattern -->
-
-                <div class="info-box info-success">
-                    <h4>✅ Activity Completion</h4>
-                    <p>Your progress is automatically saved as you complete activities. You can return anytime to continue.</p>
-                </div>
-            </section>
-
-            <!-- Resources Section -->
-            <section id="resources" class="content-section">
-                <h2>Module Resources</h2>
-
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <h3>📋 Facilitator Guide</h3>
-                        <p>Complete delivery guide with tips and troubleshooting</p>
-                        <a href="../MODULE-1/facilitator-guide/Facilitator-Notes.md" class="btn btn-secondary">View Guide</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>📝 Participant Workbook</h3>
-                        <p>Printable workbook with all activities and templates</p>
-                        <a href="../MODULE-1/resources/handouts/Participant-Workbook.md" class="btn btn-secondary">Download</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🎪 Tool Showcases</h3>
-                        <p>Detailed guides for Brisk AI and Magic School AI</p>
-                        <a href="../MODULE-1/resources/showcase/" class="btn btn-secondary">View Guides</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>♿ Differentiation Examples</h3>
-                        <p>SEND-specific resource examples and strategies</p>
-                        <a href="../MODULE-1/resources/differentiation-examples/" class="btn btn-secondary">Explore Examples</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>📊 Assessments</h3>
-                        <p>Pre/post surveys and action planning templates</p>
-                        <a href="../MODULE-1/assessments/" class="btn btn-secondary">Access Assessments</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>📚 Templates</h3>
-                        <p>Reusable prompt templates and quick references</p>
-                        <a href="../MODULE-1/resources/templates/" class="btn btn-secondary">Get Templates</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Next Steps -->
-            <section class="next-steps">
-                <h2>Next Steps</h2>
-                <div class="next-steps-content">
-                    <div class="next-step-card">
-                        <h3>Continue Your Journey</h3>
-                        <p>Ready to advance? Module 2 builds on these skills with AI for assessment and feedback.</p>
-                        <a href="module2.html" class="btn btn-primary">Go to Module 2 →</a>
-                    </div>
-
-                    <div class="next-step-card">
-                        <h3>Download Resources</h3>
-                        <p>Get all materials, handouts, and templates to implement your learning.</p>
-                        <a href="../MODULE-1/" class="btn btn-secondary">Browse All Resources</a>
-                    </div>
-                </div>
-            </section>
+        <!-- Continue Learning -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white text-center">
+            <h3 class="text-2xl font-bold mb-4">More Lessons Coming</h3>
+            <p class="text-blue-100 mb-6">This module includes 3 more hands-on lessons covering Magic School AI, differentiation strategies, and creating your own comprehensive resource pack.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition">
+                    Continue Learning →
+                </a>
+                <a href="index.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition">
+                    Back to Home
+                </a>
+            </div>
         </div>
+
+        <!-- Additional Resources -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../MODULE-1/resources/showcase/" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">📚</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Tool Guides</h3>
+                    <p class="text-sm text-gray-600">Detailed guides for all AI tools</p>
+                </a>
+
+                <a href="../MODULE-1/resources/templates/" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Prompt Templates</h3>
+                    <p class="text-sm text-gray-600">Ready-to-use prompt templates</p>
+                </a>
+
+                <a href="../MODULE-1/resources/differentiation-examples/" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">♿</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Differentiation Examples</h3>
+                    <p class="text-sm text-gray-600">SEND-specific resource examples</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AI Tools for Teachers CPD. <a href="index.html">Back to Home</a></p>
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">&copy; 2025 AI Tools for Teachers. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="module2.html" class="hover:text-white transition">Module 2</a>
+                <a href="module3.html" class="hover:text-white transition">Module 3</a>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script>
-        // Activity save functions
+        // Activity 1 Save Function
         function saveActivity1() {
             const response = document.getElementById('activity1-response').value;
             if (response.trim()) {
                 window.CPD.saveActivityResponse('module1-activity1', { response });
                 window.CPD.markActivityComplete('module1', 'activity1');
-                alert('✅ Response saved! Great work!');
+                window.CPD.showNotification('✅ Great work! Your icebreaker has been saved.');
             } else {
-                alert('Please enter your icebreaker question first.');
+                alert('Please paste your AI-generated icebreaker question first.');
             }
         }
 
-        function saveActivity3() {
-            const selectedOption = document.querySelector('input[name="activity3-option"]:checked');
-            const reflection = document.getElementById('activity3-reflection').value;
+        // Track Activity 2 checkboxes
+        document.querySelectorAll('[data-activity-checkbox]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    window.CPD.markActivityComplete('module1', this.dataset.activityId);
 
-            if (selectedOption && reflection.trim()) {
-                window.CPD.saveActivityResponse('module1-activity3', {
-                    option: selectedOption.value,
-                    reflection
-                });
-                window.CPD.markActivityComplete('module1', 'activity3');
-                alert('✅ Reflection saved! Keep up the great work!');
-            } else {
-                alert('Please select an option and add your reflection.');
-            }
-        }
-
-        // Save checklist progress
-        document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                const allChecked = Array.from(document.querySelectorAll('.checklist input[type="checkbox"]'))
-                    .every(cb => cb.checked);
-                if (allChecked) {
-                    window.CPD.markActivityComplete('module1', 'activity2');
+                    // Check if all Activity 2 tasks are complete
+                    const allChecked = Array.from(document.querySelectorAll('[data-activity-id^="activity2"]'))
+                        .every(cb => cb.checked);
+                    if (allChecked) {
+                        window.CPD.showNotification('🎉 Activity 2 complete! You\'re mastering Brisk AI!');
+                    }
                 }
             });
         });
 
-        // Load saved progress
+        // Update progress display on load
         window.addEventListener('load', () => {
-            const saved1 = window.CPD.getActivityResponse('module1-activity1');
-            if (saved1) {
-                document.getElementById('activity1-response').value = saved1.data.response;
-            }
-
-            const saved3 = window.CPD.getActivityResponse('module1-activity3');
-            if (saved3) {
-                const option = document.querySelector(`input[value="${saved3.data.option}"]`);
-                if (option) option.checked = true;
-                document.getElementById('activity3-reflection').value = saved3.data.reflection;
-            }
+            window.CPD.updateProgressDisplay();
         });
     </script>
 </body>
