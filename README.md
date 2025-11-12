@@ -156,6 +156,9 @@ Complete the trilogy by learning to guide students in responsible AI use.
 **For Self-Study:**
 Follow the session plans at your own pace, completing activities as you go.
 
+**For Online Delivery:**
+See the [**Online Delivery Guide**](./ONLINE-DELIVERY-GUIDE.md) for comprehensive strategies, tools, and adaptations for delivering all three modules virtually.
+
 ## Requirements
 
 ### Technical Requirements
