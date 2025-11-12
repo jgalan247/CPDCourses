@@ -3,142 +3,537 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 2: AI for Assessment & Feedback</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/module.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Module 2: AI for Assessment & Feedback - AI Tools for Teachers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body>
-    <div class="progress-bar"></div>
-
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html" style="text-decoration: none; color: inherit;">
-                    <h1>🤖 AI Tools for Teachers</h1>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="module1.html">Module 1</a>
-                <a href="module3.html">Module 3</a>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl">🤖</span>
+                        <span class="ml-2 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AI Tools for Teachers</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="module1.html" class="text-gray-700 hover:text-primary transition">Module 1</a>
+                    <a href="module2.html" class="text-primary font-semibold">Module 2</a>
+                    <a href="module3.html" class="text-gray-700 hover:text-primary transition">Module 3</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="module-hero module-2-bg">
-        <div class="container">
-            <div class="module-hero-content">
-                <span class="module-badge">Module 2</span>
-                <h1>AI for Assessment & Feedback</h1>
-                <p class="module-hero-description">Transform your assessment practice with AI-powered quizzes, feedback generation, and work analysis</p>
-                <div class="module-meta">
-                    <span>⏱️ 3 hours</span>
-                    <span>📚 5 Activities</span>
-                    <span>🎯 All Levels</span>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-purple-500 to-purple-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-block bg-purple-400 bg-opacity-30 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    MODULE 2
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">AI for Assessment & Feedback</h1>
+                <p class="text-xl text-purple-100 mb-6">
+                    Transform how you assess student work. Create engaging quizzes, generate personalized feedback, and save hours each week.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        ~3 hours
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        5 Practical Lessons
+                    </span>
+                    <span class="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        Self-paced
+                    </span>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <main class="module-content">
-        <div class="container">
-            <section class="content-section">
-                <h2>Module Overview</h2>
-                <div class="info-box info-primary">
-                    <h3>What You'll Learn</h3>
-                    <p>Transform your assessment and feedback practices using AI. Learn to create quizzes with Quizizz AI, generate personalized feedback efficiently, design comprehensive rubrics, and analyze student work for teaching insights.</p>
-                </div>
-
-                <div class="learning-outcomes">
-                    <h3>Learning Outcomes</h3>
-                    <div class="outcomes-grid">
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Create diverse assessments using AI</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Generate personalized feedback at scale</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Design comprehensive rubrics and success criteria</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Analyze student work patterns for insights</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Apply ethical AI practices in assessment</p>
-                        </div>
-                        <div class="outcome-card">
-                            <div class="outcome-icon">✓</div>
-                            <p>Evaluate AI-generated assessments</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="content-section">
-                <h2>Full Module Materials</h2>
-                <div class="info-box info-tip">
-                    <p><strong>📁 Access Complete Resources:</strong> View the full session plan, activities, and materials in the <a href="../MODULE-2/">MODULE-2 folder</a>.</p>
-                </div>
-
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <h3>📋 Session Plan</h3>
-                        <p>Detailed 3-hour breakdown</p>
-                        <a href="../MODULE-2/Session-Plan.md" class="btn btn-secondary">View Plan</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🎯 Activities</h3>
-                        <p>5 hands-on exercises</p>
-                        <a href="../MODULE-2/resources/activities/" class="btn btn-secondary">See Activities</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>📝 Workbook</h3>
-                        <p>Participant materials</p>
-                        <a href="../MODULE-2/resources/handouts/Participant-Workbook.md" class="btn btn-secondary">Download</a>
-                    </div>
-
-                    <div class="resource-card">
-                        <h3>🎪 Tool Guides</h3>
-                        <p>Quizizz AI & more</p>
-                        <a href="../MODULE-2/resources/showcase/" class="btn btn-secondary">View Guides</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="next-steps">
-                <h2>Continue Your Journey</h2>
-                <div class="next-steps-content">
-                    <div class="next-step-card">
-                        <h3>Next Module</h3>
-                        <p>Module 3 teaches you to guide students in responsible AI use</p>
-                        <a href="module3.html" class="btn btn-primary">Go to Module 3 →</a>
-                    </div>
-
-                    <div class="next-step-card">
-                        <h3>Previous Module</h3>
-                        <p>Review Module 1 on daily tasks and resource creation</p>
-                        <a href="module1.html" class="btn btn-secondary">Back to Module 1</a>
-                    </div>
-                </div>
-            </section>
+    <!-- Progress Indicator -->
+    <div class="bg-white border-b border-gray-200 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-medium text-gray-700">Your Progress</span>
+                <span class="text-sm font-medium text-purple-600" id="module2-progress-text">0%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="module2-progress-bar" class="bg-gradient-to-r from-purple-500 to-purple-700 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
         </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Learning Outcomes -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">What You'll Learn</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Create AI-Powered Quizzes</h3>
+                    <p class="text-gray-600 text-sm">Generate diverse, engaging assessments in minutes using Quizizz AI</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Generate Personalized Feedback</h3>
+                    <p class="text-gray-600 text-sm">Provide meaningful, specific feedback at scale without burning out</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Design Effective Rubrics</h3>
+                    <p class="text-gray-600 text-sm">Create clear, comprehensive rubrics and success criteria with AI</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Analyze Student Work</h3>
+                    <p class="text-gray-600 text-sm">Identify patterns and insights to inform your teaching practice</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Ethical Assessment with AI</h3>
+                    <p class="text-gray-600 text-sm">Maintain fairness, transparency, and academic integrity</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Validate AI Assessments</h3>
+                    <p class="text-gray-600 text-sm">Critically evaluate and refine AI-generated assessments</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 1: Quizizz AI -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">1</div>
+                        <h2 class="text-2xl font-bold">Creating Quizzes with Quizizz AI</h2>
+                    </div>
+                    <p class="text-purple-100">Generate engaging, interactive quizzes in minutes</p>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Why Quizizz AI?</h3>
+                    <p class="text-gray-700 mb-6">
+                        Creating good quiz questions takes time. You need to write questions at the right difficulty level, include plausible distractors, and align with learning objectives. Quizizz AI does this in minutes, freeing you to focus on teaching.
+                    </p>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6">
+                        <p class="font-semibold text-purple-900 mb-2">💡 Key Benefit</p>
+                        <p class="text-purple-800">Quizizz AI can generate a complete 15-question quiz from any topic, article, or document in under 2 minutes—complete with multiple-choice options, images, and difficulty levels.</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 1: Access Quizizz AI</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li>Go to <a href="https://quizizz.com" target="_blank" class="text-purple-600 hover:underline font-semibold">quizizz.com</a></li>
+                            <li>Create a free teacher account (or log in)</li>
+                            <li>Click "Create" in the top menu</li>
+                            <li>Select "Quiz" then choose "AI-Assisted"</li>
+                            <li>You're ready to generate your first quiz!</li>
+                        </ol>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 2: Generate Your Quiz</h3>
+                    <p class="text-gray-700 mb-4">Quizizz AI offers multiple ways to create quizzes:</p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-5 rounded-lg border border-purple-200">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                <span class="text-2xl">📝</span>
+                                From a Topic
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-3">Simply enter a topic like "World War 2" or "Photosynthesis" and Quizizz generates relevant questions.</p>
+                            <div class="bg-white p-3 rounded text-xs text-gray-700 italic">
+                                "Create a 10-question quiz on the water cycle for Year 5 students"
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-5 rounded-lg border border-blue-200">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                <span class="text-2xl">🔗</span>
+                                From a URL
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-3">Paste any article or webpage URL and Quizizz creates questions based on that content.</p>
+                            <div class="bg-white p-3 rounded text-xs text-gray-700 italic">
+                                Perfect for news articles, educational websites, or reading comprehension
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-5 rounded-lg border border-green-200">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                <span class="text-2xl">📄</span>
+                                From a Document
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-3">Upload a PDF, Word doc, or paste text and get instant questions on that content.</p>
+                            <div class="bg-white p-3 rounded text-xs text-gray-700 italic">
+                                Great for textbook chapters, handouts, or your own notes
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-5 rounded-lg border border-yellow-200">
+                            <h4 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                <span class="text-2xl">🎯</span>
+                                From Standards
+                            </h4>
+                            <p class="text-sm text-gray-600 mb-3">Select curriculum standards and Quizizz creates aligned questions automatically.</p>
+                            <div class="bg-white p-3 rounded text-xs text-gray-700 italic">
+                                Ensures curriculum alignment with minimal effort
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Step 3: Customize Your Quiz</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <p class="text-gray-700 mb-3">Once generated, you can:</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Edit any question to make it more specific or challenging
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Add images, audio, or video to make questions more engaging
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Adjust difficulty levels to match your students' abilities
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Reorder questions or remove any that don't fit
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Set time limits, shuffle options, or enable power-ups for gamification
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Activity 1 -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-yellow-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Create Your First AI Quiz</h3>
+                                <p class="text-sm text-gray-600">Time: 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Task: Generate a Quiz</p>
+                            <p class="text-gray-700 mb-4">Use Quizizz AI to create a 5-10 question quiz for your subject area. Choose ONE method:</p>
+
+                            <div class="space-y-3 mb-4">
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <p class="font-medium text-purple-900">Option A: From a Topic</p>
+                                    <p class="text-sm text-purple-700">Enter a topic you're teaching soon</p>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <p class="font-medium text-blue-900">Option B: From a URL</p>
+                                    <p class="text-sm text-blue-700">Find an article and turn it into a comprehension quiz</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <p class="font-medium text-green-900">Option C: From a Document</p>
+                                    <p class="text-sm text-green-700">Upload a chapter or handout you use in class</p>
+                                </div>
+                            </div>
+
+                            <label class="block text-sm font-medium text-gray-700 mb-2">What did you create? Share your quiz topic and thoughts:</label>
+                            <textarea
+                                id="activity1-response"
+                                data-activity-id="activity1"
+                                data-module="module2"
+                                rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                                placeholder="Example: 'I created a 10-question quiz on the Solar System for Year 6. Used the topic method and it generated great questions! I edited 2 questions to match our specific curriculum.'"></textarea>
+
+                            <button onclick="saveActivity1()" class="mt-4 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                                Save & Mark Complete ✓
+                            </button>
+                        </div>
+
+                        <div class="bg-yellow-100 p-4 rounded-lg">
+                            <p class="text-sm text-yellow-900"><strong>💡 Reflection:</strong> How long would this quiz have taken to create manually? Could you use Quizizz AI for your next assessment?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 2: Personalized Feedback -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-8 text-white">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-white bg-opacity-20 rounded-lg flex items-center justify-center font-bold">2</div>
+                        <h2 class="text-2xl font-bold">Generating Personalized Feedback</h2>
+                    </div>
+                    <p class="text-blue-100">Provide meaningful feedback efficiently using AI assistance</p>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">The Feedback Challenge</h3>
+                    <p class="text-gray-700 mb-6">
+                        We all know feedback is crucial for student learning. But writing personalized, constructive feedback for 30+ students on every assignment? That's dozens of hours each term. AI can help you provide better feedback in a fraction of the time.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                            <p class="font-semibold text-red-900 mb-2">❌ Generic Feedback</p>
+                            <p class="text-sm text-red-800 italic">"Good work! Keep it up. Try to add more detail next time."</p>
+                            <p class="text-xs text-red-700 mt-2">Too vague—students don't know what to improve</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <p class="font-semibold text-green-900 mb-2">✅ Specific, AI-Assisted Feedback</p>
+                            <p class="text-sm text-green-800 italic">"Your thesis is clear, but paragraph 2 lacks supporting evidence. Try adding a specific example from the text. Your conclusion effectively summarizes but could strengthen the connection to your opening argument."</p>
+                            <p class="text-xs text-green-700 mt-2">Specific, actionable, personalized</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">How to Use AI for Feedback</h3>
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg mb-6">
+                        <h4 class="font-semibold text-gray-900 mb-3">📝 The Feedback Formula:</h4>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">1. Provide Context to AI</p>
+                                <p class="text-sm text-gray-600 italic">"You are reviewing a Year 9 history essay on the causes of World War 1. The rubric criteria are: thesis statement, use of evidence, analysis depth, and writing clarity."</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">2. Paste Student Work</p>
+                                <p class="text-sm text-gray-600">(Copy the student's essay, answer, or project description)</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="font-medium text-gray-900 mb-2">3. Request Specific Feedback</p>
+                                <p class="text-sm text-gray-600 italic">"Provide constructive feedback highlighting 2 strengths and 2 specific areas for improvement. Use encouraging language appropriate for 14-year-olds. Keep under 100 words."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
+                        <p class="font-semibold text-yellow-900 mb-2">⚠️ Important: Always Review AI Feedback</p>
+                        <p class="text-yellow-800 text-sm">AI-generated feedback should be a starting point, not the final version. Always read, personalize, and ensure accuracy before sharing with students.</p>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border-2 border-blue-200 mt-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center text-2xl">🎯</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900">Try It Yourself: Generate Feedback</h3>
+                                <p class="text-sm text-gray-600">Time: 15 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg mb-4">
+                            <p class="font-semibold text-gray-900 mb-3">Task: Create Feedback for Sample Work</p>
+                            <p class="text-gray-700 mb-4">Use ChatGPT or another AI tool to generate feedback for a sample of student work (can be real or hypothetical).</p>
+
+                            <div class="space-y-4">
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task1"
+                                        data-module="module2"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 1: Create your prompt with context</p>
+                                        <p class="text-sm text-gray-600 mt-1">Include assignment type, year level, and rubric criteria</p>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task2"
+                                        data-module="module2"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 2: Generate feedback using AI</p>
+                                        <p class="text-sm text-gray-600 mt-1">Request specific, constructive, age-appropriate feedback</p>
+                                    </div>
+                                </label>
+
+                                <label class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        data-activity-checkbox
+                                        data-activity-id="activity2-task3"
+                                        data-module="module2"
+                                        class="mt-1 w-5 h-5 text-blue-600 rounded">
+                                    <div class="flex-1">
+                                        <p class="font-medium text-gray-900">Step 3: Review and personalize</p>
+                                        <p class="text-sm text-gray-600 mt-1">Edit the AI feedback to add your voice and ensure accuracy</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <p class="text-sm text-blue-900"><strong>💡 Pro Tip:</strong> Save your best feedback prompts as templates. Reuse them for similar assignments to save even more time!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue Learning -->
+        <div class="bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl p-8 text-white text-center">
+            <h3 class="text-2xl font-bold mb-4">More Lessons Coming</h3>
+            <p class="text-purple-100 mb-6">This module includes 3 more practical lessons on designing rubrics, analyzing student work patterns, and maintaining ethical assessment practices with AI.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-white text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition">
+                    Continue Learning →
+                </a>
+                <a href="index.html" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Resources</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="../MODULE-2/resources/showcase/Quizizz-AI-Guide.md" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">📚</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Quizizz AI Guide</h3>
+                    <p class="text-sm text-gray-600">Complete guide to using Quizizz AI</p>
+                </a>
+
+                <a href="../MODULE-2/resources/activities/" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">All Activities</h3>
+                    <p class="text-sm text-gray-600">5 hands-on assessment activities</p>
+                </a>
+
+                <a href="../MODULE-2/resources/handouts/Participant-Workbook.md" class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Workbook</h3>
+                    <p class="text-sm text-gray-600">Templates and reflection prompts</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AI Tools for Teachers CPD. <a href="index.html">Back to Home</a></p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">&copy; 2025 AI Tools for Teachers. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-sm">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="module1.html" class="hover:text-white transition">Module 1</a>
+                <a href="module3.html" class="hover:text-white transition">Module 3</a>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Activity 1 Save Function
+        function saveActivity1() {
+            const response = document.getElementById('activity1-response').value;
+            if (response.trim()) {
+                window.CPD.saveActivityResponse('module2-activity1', { response });
+                window.CPD.markActivityComplete('module2', 'activity1');
+                window.CPD.showNotification('✅ Excellent! Your quiz experience has been saved.');
+            } else {
+                alert('Please share what quiz you created first.');
+            }
+        }
+
+        // Track Activity 2 checkboxes
+        document.querySelectorAll('[data-activity-checkbox]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    window.CPD.markActivityComplete('module2', this.dataset.activityId);
+
+                    // Check if all Activity 2 tasks are complete
+                    const allChecked = Array.from(document.querySelectorAll('[data-activity-id^="activity2"]'))
+                        .every(cb => cb.checked);
+                    if (allChecked) {
+                        window.CPD.showNotification('🎉 Activity 2 complete! You\'re mastering AI feedback!');
+                    }
+                }
+            });
+        });
+
+        // Update progress display on load
+        window.addEventListener('load', () => {
+            window.CPD.updateProgressDisplay();
+        });
+    </script>
 </body>
 </html>
